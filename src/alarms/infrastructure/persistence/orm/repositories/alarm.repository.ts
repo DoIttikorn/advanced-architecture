@@ -21,7 +21,7 @@ export class OrmAlarmRepository extends AlarmRepository {
   }
 
   async save(alarm: Alarm): Promise<Alarm> {
-    // save ไม่ได้เพราะว่า alarm ไม่ใช่ entity ของ typeorm
+    // save ไม่ได้เพราะว่า alarm ไม่ใช่ entity type ของ typeorm
     // ดังนั้นต้องแปลงจาก domain model ไปเป็น entity ก่อน โดยการใช้ mapper
     // return await this.alarmRepository.save(alarm);
     const persistenceModel = AlarmMapper.toPersistence(alarm);

@@ -13,7 +13,7 @@ export class InMemoryAlarmRepository extends AlarmRepository {
     return entities.map((item) => AlarmMapper.toDomain(item));
   }
 
-  // save ไม่ได้เพราะว่า alarm ไม่ใช่ entity ของ in-memory
+  // save ไม่ได้เพราะว่า alarm ไม่ใช่ entity type ของ in-memory
   async save(alarm: Alarm): Promise<Alarm> {
     // ใช้ in-memory จึงต้องแปลงจาก domain model ไปเป็น entity ก่อน โดยการใช้ mapper
     const persistenceModel = AlarmMapper.toPersistence(alarm);
