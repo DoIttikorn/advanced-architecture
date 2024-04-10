@@ -1,5 +1,7 @@
 # CQRS
 
 ```bash
-npm install --save @nestjs/cqrs
+pnpm install --save @nestjs/cqrs
+
+pnpm install --save @nestjs/mongoose mongoose
 ```

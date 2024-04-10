@@ -6,3 +6,24 @@ Content-Type: application/json
 ###
 
 GET http://localhost:3000/alarms 
+
+### CQRS
+
+POST http://localhost:3000/alarms
+Content-Type: application/json
+
+{
+    "name": "Test Alarm",
+    "severity": "HIGH",
+    "triggeredAt": "2021-07-01T12:00:00Z",
+    "items": [
+        {
+            "name": "Item 1",
+            "type": "TYPE_1"
+        },
+        {
+            "name": "Item 2",
+            "tyupe": "TYPE_2"
+        }
+    ]
+}
