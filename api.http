@@ -13,7 +13,7 @@ POST http://localhost:3000/alarms
 Content-Type: application/json
 
 {
-    "name": "Test Alarm",
+    "name": "Test Alarm Segas",
     "severity": "HIGH",
     "triggeredAt": "2021-07-01T12:00:00Z",
     "items": [
@@ -27,3 +27,7 @@ Content-Type: application/json
         }
     ]
 }
+
+### Update Alarm Acknowledged
+
+PATCH http://localhost:3000/alarms/69daa0f0-08cf-405d-8611-625ce3a1a576/acknowledge
